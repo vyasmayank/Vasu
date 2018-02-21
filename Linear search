@@ -1,0 +1,30 @@
+#include <stdio.h>
+struct search{
+    int s;
+    int a[];
+};
+void linear(struct search l)
+{
+    for(int i=0;i<10;i++)
+    {
+        if(l.a[i]==l.s)
+        {
+            printf("the position of the element is %d.",i);
+        }
+    }
+}
+
+void main()
+{ int s;
+
+int a[10];
+printf("Enter 10 values");
+for(int i=0;i<10;i++)
+{
+    scanf("%d",&a[i]);
+}
+printf("Enter value to be searched:");
+scanf("%d",&s);
+struct search ls={s,a[]};
+linear(ls);
+}
