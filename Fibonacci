@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+void fibonacci(int n)
+{
+    int f1=0,f2=1,f3;
+    printf("%d,%d,",f1,f2);
+    
+    for(int i=1;i<=n;i++)
+    {
+        f3=f1+f2;
+        if(i==n)
+        printf("%d.",f3);
+        else
+        printf("%d,",f3);
+        f1=f2;
+        f2=f3;
+    }
+}
+
+void main()
+{
+    int n;
+    printf("Enter limit:");
+    scanf("%d",&n);
+    fibonacci(n);
+}
