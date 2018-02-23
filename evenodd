@@ -1,0 +1,41 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int evenodd(int n)
+{
+    int t;
+    if(n%2==0)
+    t=0;
+    else
+    t=1;
+    return t;
+    
+}
+int input()
+{
+    int n;
+    printf("Enter a number:");
+    scanf("%d",&n);
+    return n;
+}
+
+void main()
+{
+    int n=input();
+    
+    for(int i=0;i<=n;i++)
+    {
+        int t=evenodd(i);
+        if(t==0)
+        printf("%d is an even number.\n",i);
+        else
+        printf("%d is an odd number.\n",i);
+    }
+}
