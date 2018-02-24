@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int factorial(int n)
 {
     int fact=1;
@@ -7,9 +6,10 @@ int factorial(int n)
     {
         fact=fact*i;
     }
+    if (n==0)
+    fact=0;
     return fact;
 }
-
 void main()
 {
    int n;
