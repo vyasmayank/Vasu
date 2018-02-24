@@ -1,7 +1,7 @@
 #include<stdio.h>
 char grade(int m)
 {
-    char c;
+    char c='*';
     if(m>=90&&m<=100)
         c='A';
     else if(m>=80&&m<90)
@@ -12,7 +12,7 @@ char grade(int m)
         c='D';
     else if(m>=50&&m<60)
         c='E';
-    else if(m<50)
+    else if(m<50&&m>=0)
         c='F';
     return c;
 }
@@ -23,5 +23,8 @@ void main()
     printf("Enter marks:");
     scanf("%d",&m);
     char ch=grade(m);
+    if(ch!='*')
     printf("Grade=%c",ch);
+    else
+    printf("Invalid number.");
 }
