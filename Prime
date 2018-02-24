@@ -1,0 +1,30 @@
+include<stdio.h>
+int prime(int n)
+{
+    int t=0;
+    if(n==1)
+        t=1;
+    for(int i=2;i<n;i++)
+    {
+        if(n%i==0)
+            t=1;
+    }
+    if(n==2)
+        t=0;
+    return t;
+}
+
+void main()
+{
+    unsigned int n;
+    printf("Enter limit:");
+    scanf("%u",&n);
+    for(int i=1;i<=n;i++)
+    {
+        int t=prime(i);
+        if(t==0)
+            printf("%d is a prime number.\n",i);
+        else
+            printf("%d is not a prime number\n",i);
+    }
+}
