@@ -1,0 +1,29 @@
+int linear(int a[],int n,int s)
+{
+    struct search ls={0,-1};
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]==s)
+        {
+            ls.t++;
+            ls.p=i;
+        }
+    }
+}
+
+void main()
+{
+    int a[100],n,s;
+    printf("Enter number of elements:");
+    scanf("%d",&n);
+    printf("Enter elements of array:");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("Ente number to be searched:");
+    scanf("%d",&s);
+    linear(a,n,s);
+    struct search sl;
+    printf("Position:",sl.p)
+}
